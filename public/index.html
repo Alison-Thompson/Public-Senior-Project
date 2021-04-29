@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Styling -->
+		<link rel="stylesheet" href="Styling/dialog.css">
+		<link rel="stylesheet" href="Styling/mainPage.css">
+		<link rel="stylesheet" href="Styling/game.css">
+		<link rel="stylesheet" href="Styling/loginPage.css">
+	</head>
+	<body>
+
+		<!-- Dialog -->
+		<div id="Dialog">
+			
+			<img v-if="v_showBackgroundImage" id="dialogBackgroundImage" :src="v_backgroundImage" />
+
+			<div id="dialogDiv" v-if="v_isDisplayed">
+				<div id="dialogBox" v-on:click="BoxClicked()">
+					<p id="dialogText">{{ v_dialog }}</p>
+				</div>
+				<img id="dialogSprite" :src="v_dialogSpriteSource" v-bind:alt="v_dialogSpriteAlt" />
+			</div>
+
+		</div>
+
+		<!-- Main Page -->
+		<div id="MainPage">
+
+			<!-- Main Page Wrapper -->
+			<div v-if="v_isDisplayed">
+
+				<img id="mainPageBackgroundImage" src="Resources/Images/dormDay.jpg" />
+
+				<!-- Classes Header -->
+				<div id="classes">
+					<div class="class" v-for="currentClass in v_classes">
+						<image class="classImage" :src="currentClass.imageSource" v-bind:alt="currentClass.imageAlt" />
+						<p class="classInfo"><strong>{{ currentClass.name }}: </strong> {{ currentClass.grade }}</p>
+					</div>
+				</div>
+
+				<!-- Schedule List -->
+				<div id="schedule">
+					<div class="scheduleItem" v-for="(currentScheduleItem, index) in v_schedule" v-on:click="StartLevel(currentScheduleItem.level, currentScheduleItem.classIndex, index)">
+						<p class="scheduleText">{{ currentScheduleItem.name }}</p>
+						<p class="scheduleText">Impact on Grade: {{ currentScheduleItem.impact }}</p>
+					</div>
+				</div>
+
+				<!-- Friends List -->
+				<div id="friends">
+					<div v-for="(currentFriend, index) in v_friends" v-bind:class="currentFriend.style" v-on:click="ViewFriend(currentFriend, index)">
+						<p class="friendText">{{ currentFriend.name }}</p>
+					</div>
+				</div>
+
+				<!-- Selected Friend -->
+				<div id="selectedFriend" v-if="v_currentFriend">
+					<p id="selectedFriendName"> {{ v_currentFriend.name }} </p>
+					<image id="selectedFriendImage" :src="v_currentFriend.imageSource" v-bind:alt="v_currentFriend.imageAlt" />
+					<p id="selectedFriendBlurb"> {{ v_currentFriend.blurb }} </p>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Game -->
+		<div id="Game">
+			<canvas id="gameCanvas" v-show="v_isDisplayed"></canvas>
+		</div>
+
+		<!-- Login Page -->
+		<div id="LoginPage">
+
+			<!-- Login Page Wrapper -->
+			<div v-if="v_isDisplayed">
+
+				<img id="backgroundImage" src="Resources/Images/loginBackground.png" />
+
+				<div id="header">
+					<h1 id="headerText">The Battle Through Blackwood</h1>
+				</div>
+
+				<div id="body"></div>
+				<p id="bodyText" v-if="v_mode == 0">Login</p>
+				<p id="bodyText" v-else>Sign Up</p>
+				<input id="inputEmail" type="text" placeholder="Email" v-model="v_emailInput">
+				<input id="inputPassword" type="password" placeholder="Password" v-model="v_passwordInput">
+				<button id="submitButton" v-if="v_mode == 0" v-on:click="AttemptLogin">Submit</button>
+				<button id="submitButton" v-else v-on:click="AttemptSignUp">Submit</button>
+				<button id="changeModeButton" v-if="v_mode == 0" v-on:click="ChangeMode">Sign Up</button>
+				<button id="changeModeButton" v-else v-on:click="ChangeMode">Login</button>
+				
+			</div>
+
+		</div>
+
+
+		<!-- Javascript -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script src="Javascript/serverOperations.js"></script>
+		<script src="Javascript/commons.js"></script>
+		<script src="Javascript/Projectile.js"></script>
+		<script src="Javascript/DarkScott.js"></script>
+		<script src="Javascript/RangedGrunt.js"></script>
+		<script src="Javascript/MeleeGrunt.js"></script>
+		<script src="Javascript/Scott.js"></script>
+		<script src="Javascript/LevelHandler.js"></script>
+		<script src="Javascript/dialog.js"></script>
+		<script src="Javascript/mainPage.js"></script>
+		<script src="Javascript/game.js"></script>
+		<script src="Javascript/loginPage.js"></script>
+	</body>
+</html>

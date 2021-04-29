@@ -1,0 +1,91 @@
+// Vue Objects
+var MainPage;
+var LoginPage;
+var Game;
+var Dialog;
+
+// Game Objects
+function LevelHandler() {};
+LevelHandler.prototype.Update = function() {};
+LevelHandler.prototype.IsLevelComplete = function() {};
+
+function Scott() {};
+Scott.prototype.Init = function() {};
+Scott.prototype.Draw = function() {};
+Scott.prototype.DrawHealthBar = function() {};
+Scott.prototype.Update = function() {};
+Scott.prototype.CollisionHandler = function() {};
+Scott.prototype.Animate = function() {};
+Scott.prototype.ChangeDirection = function() {};
+Scott.prototype.GetDirection = function() {};
+Scott.prototype.ChangeState = function() {};
+Scott.prototype.GetState = function() {};
+Scott.prototype.GetNextInput = function() {};
+Scott.prototype.SetNextInput = function() {};
+Scott.prototype.GetCurrentInput = function() {};
+Scott.prototype.SetCurrentInput = function() {};
+Scott.prototype.GetX = function() {};
+Scott.prototype.GetY = function() {};
+Scott.prototype.GetSpriteWidth = function() {};
+Scott.prototype.GetSpriteHeight = function() {};
+Scott.prototype.SetLastTime = function() {};
+Scott.prototype.GetScale = function() {};
+Scott.prototype.GetProjectileSpeed = function() {};
+Scott.prototype.GetProjectileColor = function() {};
+Scott.prototype.GetTeleportDistance = function() {};
+Scott.prototype.SetTeleportLocation = function() {};
+Scott.prototype.SetMousePosition = function() {};
+Scott.prototype.GetMouseX = function() {};
+Scott.prototype.GetMouseY = function() {};
+Scott.prototype.GetAttackDamage = function() {};
+Scott.prototype.TakeDamage = function() {};
+Scott.prototype.IsAlive = function() {};
+
+function DarkScott() {};
+DarkScott.prototype.Init = function() {};
+DarkScott.prototype.Draw = function() {};
+DarkScott.prototype.DrawHealthBar = function() {};
+DarkScott.prototype.Update = function() {};
+DarkScott.prototype.CollisionHandler = function() {};
+DarkScott.prototype.Animate = function() {};
+DarkScott.prototype.Attack = function() {};
+DarkScott.prototype.Teleport = function() {};
+DarkScott.prototype.GetAlive = function() {};
+DarkScott.prototype.GetSpriteWidth = function() {};
+DarkScott.prototype.GetSpriteHeight = function() {};
+DarkScott.prototype.GetScale = function() {};
+
+function MeleeGrunt() {};
+MeleeGrunt.prototype.Draw = function() {};
+MeleeGrunt.prototype.DrawHealthBar = function() {};
+MeleeGrunt.prototype.Update = function() {};
+MeleeGrunt.prototype.CollisionHandler = function() {};
+MeleeGrunt.prototype.Animate = function() {};
+MeleeGrunt.prototype.Init = function() {};
+MeleeGrunt.prototype.GetAlive = function() {};
+MeleeGrunt.prototype.GetSpriteWidth = function() {};
+MeleeGrunt.prototype.GetSpriteHeight = function() {};
+MeleeGrunt.prototype.GetScale = function() {};
+
+function RangedGrunt() {};
+RangedGrunt.prototype.Draw = function() {};
+RangedGrunt.prototype.DrawHealthBar = function() {};
+RangedGrunt.prototype.Update = function() {};
+RangedGrunt.prototype.CollisionHandler = function() {};
+RangedGrunt.prototype.Init = function() {};
+RangedGrunt.prototype.Animate = function() {};
+RangedGrunt.prototype.GetAlive = function() {};
+RangedGrunt.prototype.GetSpriteWidth = function() {};
+RangedGrunt.prototype.GetSpriteHeight = function() {};
+RangedGrunt.prototype.GetScale = function() {};
+
+function Projectile() {};
+Projectile.prototype.Draw = function() {};
+Projectile.prototype.Update = function() {};
+Projectile.prototype.ShouldClean = function() {};
+Projectile.prototype.SetShouldClean = function() {};
+Projectile.prototype.IsFriendly = function() {};
+Projectile.prototype.GetX = function() {};
+Projectile.prototype.GetY = function() {};
+Projectile.prototype.GetRadius = function() {};
+Projectile.prototype.GetDamage = function() {};

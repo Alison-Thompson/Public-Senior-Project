@@ -1,0 +1,6 @@
+#gameCanvas {
+	display: block;
+	background-image: url(../Resources/Images/ground-repeatable.jpg);
+	background-size: contain;
+	overflow: hidden;
+}

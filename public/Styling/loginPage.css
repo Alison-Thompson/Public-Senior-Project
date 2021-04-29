@@ -1,0 +1,133 @@
+/*Color Scheme
+A: #C2BFF2
+B: #C7D3FC
+C: #C0D2E5
+D: #C7EFFC
+E: #BFF2F2
+*/
+
+
+#header {
+	position: fixed;
+	top: 1%;
+	left: 3.5%;
+	border: 2px solid black;
+	background: white;
+	width: 93%;
+	height: 15%;
+	background-color: #C2BFF2;
+}
+
+#headerText {
+	user-select: none;
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 250%;
+	padding: 0px;
+	margin: 0px;
+}
+
+#body {
+	position: fixed;
+	top: 22%;
+	left: 3.5%;
+	border: 2px solid black;
+	background: #C7D3FC;
+	width: 93%;
+	height: 73%;
+	opacity: 80%;
+}
+
+#bodyText {
+	position: fixed;
+	left: 50%;
+	top: 27%;
+	width: 50%;
+	margin-left: -calc(25%);
+	transform: translate(-50%, -50%);
+	font-size: 300%;
+	text-align: center;
+	user-select: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#inputEmail {
+	position: fixed;
+	top: 35%;
+	left: 37.5%;
+	width: 25%;
+	height: 10%;
+	background-color: #C7EFFC;
+	border: 2px solid black;
+	font-size: 125%;
+	color: black !important;
+	padding-left: 0.5em;
+	user-select: none;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	margin: 0px;
+}
+
+#inputPassword {
+	position: fixed;
+	top: 50%;
+	left: 37.5%;
+	width: 25%;
+	height: 10%;
+	background-color: #C7EFFC;
+	border: 2px solid black;
+	font-size: 125%;
+	color: black !important;
+	padding-left: 0.5em;
+	user-select: none;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	margin: 0px;
+}
+
+#submitButton {
+	position: fixed;
+	background-color: #BFF2F2;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	width: 15%;
+	height: 7%;
+	top: 65%;
+	left: 42.5%;
+	cursor: pointer;
+	user-select: none;
+}
+
+#changeModeButton {
+	position: fixed;
+	background-color: #BFF2F2;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	width: 15%;
+	height: 7%;
+	top: 87%;
+	left: 42.5%;
+	cursor: pointer;
+	user-select: none;
+}
+
+#backgroundImage {
+	user-select: none;
+	position: fixed;
+	object-fit: fill;
+	height: 100%;
+	width: 100%;
+	z-index: -2;
+}
